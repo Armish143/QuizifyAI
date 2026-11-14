@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>QuizifyAI</title>
+    <link rel="icon" type="image/x-icon" href="assests/img/favicon32.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assests/css/owl.carousel.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assests/css/style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg text-center mb-2  " id="navbar">
+        <div class="container ">
+            <div class="navbar-cus ">
+                <a class="navbar-brand" href="index.html"><img class="logo-img  " src="assests/img/logo.png" alt=""></a>
+                <a class="book-btn-nav quick-and-easy2  " href="quizgenerator.html">Start Quiz</a>
+                <button class="navbar-toggler nav-bartogcus" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-cusm">
+                        <li class="nav-item">
+                            <a class="nav-link "  data-page="home" href="index.html">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" href="quizgenerator.html">Quiz generator</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+
+<!-- 
+                        <li class="nav-item mob-dis-none">
+                            <a class="nav-link active mobil-view-d-none " href="quizgenerator.html">Start Quiz</a>
+                        </li> -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+<main>
+
+ <!-- AI Quiz Generator Hero + Form -->
+    <section id="ai-quiz-generator" class="quiz-hero-section">
+      <div class="container">
+        <header class="quiz-hero-header">
+          <h2 class="mainheading">AI Quiz <span>Generator</span></h2>
+          <p class="quiz-sub">
+            Create personalized quizzes on any topic using our advanced AI.
+            Customize difficulty, question count, and let AI generate unique
+            questions for you.
+          </p>
+        </header>
+
+        <div class="quiz-card">
+          <form
+            id="quiz-config-form"
+            class="quiz-config"
+            autocomplete="off"
+            novalidate
+          >
+            <div class="row g-3">
+              <div class="col-12">
+                <label for="topic" class="form-label">Quiz Topic</label>
+                <div class="input-with-icon">
+                  <input
+                    id="topic"
+                    name="topic"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter any topic... (e.g., Machine Learning, Ancient History, Cooking)"
+                    required
+                  />
+                  <svg class="search-ic" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 1016 15.5l.27.28v.79L21 21.49 22.49 20 17 14.5zM6.5 11A4.5 4.5 0 1111 15.5 4.5 4.5 0 016.5 11z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="difficulty" class="form-label"
+                  >Difficulty Level</label
+                >
+                <select id="difficulty" name="difficulty" class="form-select">
+                  <option value="easy">Easy — Beginner</option>
+                  <option value="medium" selected>Medium — Intermediate</option>
+                  <option value="hard">Hard — Advanced</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="count" class="form-label"
+                  >Number of Questions</label
+                >
+                <select id="count" name="count" class="form-select">
+                  <option value="5">5 Questions</option>
+                  <option value="10" selected>10 Questions</option>
+                  <option value="15">15 Questions</option>
+                  <option value="20">20 Questions</option>
+                </select>
+              </div>
+
+              <div class="col-12 d-flex gap-3 align-items-center action-row">
+                <button id="generate-quiz" type="submit" class="btn-generate">
+                  <span class="spark">✦</span> Generate Quiz
+                </button>
+
+                <button id="save-config" type="button" class="btn-outline-save">
+                  <i class="fa-regular fa-floppy-disk"></i> Save Config
+                </button>
+
+                <div
+                  id="form-feedback"
+                  aria-live="polite"
+                  class="form-feedback"
+                ></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Quiz display container -->
+<div id="quiz-container" class="quiz-display hidden mt-4"></div>
+
+</main>
+</body>
+   
+
+    <!-- Footer (clean) -->
+    <footer class="footer-wclean px-lg-0 px-3 mt-5">
+      <div class="bg-section">
+        <div class="footer-sec text-center py-4">
+          <a href="index.html"
+            ><img
+              class="img-fluid mb-3"
+              src="assests/img/footer-logo.png"
+              alt=""
+          /></a>
+          <p class="mb-2">Made with &#128151; in Gujranwala, Pakistan</p>
+
+          <ul
+            class="my-list pt-3 ps-0 d-flex justify-content-center gap-3"
+            style="list-style: none"
+          >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">About</a></li>
+            <li><a href="services.html">Features</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="cop-rigts text-center pt-4">
+            <p class="mb-1">
+              © <span id="year-el"></span> QuizifyAI — All rights reserved.
+            </p>
+            <a href="terms-conditions.html">Terms and conditions</a>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- page script -->
+    <script src="assests/js/quizify.js"></script>
+
+    <script>
+      // footer year
+      document.getElementById("year-el").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

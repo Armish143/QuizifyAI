@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <title>QuizifyAI</title>
+    <link rel="icon" type="image/x-icon" href="assests/img/favicon32.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assests/css/owl.carousel.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assests/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg text-center mb-2" id="navbar">
+      <div class="container">
+        <div class="navbar-cus">
+          <a class="navbar-brand" href="index.html"
+            ><img class="logo-img" src="assests/img/logo.png" alt=""
+          /></a>
+          <a class="book-btn-nav quick-and-easy2" href="quizgenerator.html"
+            >Start Quiz</a
+          >
+          <button
+            class="navbar-toggler nav-bartogcus"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-cusm">
+              <li class="nav-item">
+                <a class="nav-link" data-page="home" href="index.html">Home</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="quizgenerator.html">Quiz generator</a>
+              </li>
+              
+              
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact</a>
+              </li>
+
+              <!-- 
+                        <li class="nav-item mob-dis-none">
+                            <a class="nav-link active mobil-view-d-none " href="quizgenerator.html">Start Quiz</a>
+                        </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- HERO -->
+      <header class="contact-hero text-center">
+        <div class="container">
+          <h1 class="mainheading">Contact Us</h1>
+          <p class="hero-sub">
+            Questions, feedback or partnership ideas? We’d love to hear from
+            you.
+          </p>
+        </div>
+      </header>
+
+      <!-- CONTACT CARD -->
+      <div class="container my-5">
+        <div
+          class="card contact-card mx-auto shadow-sm"
+          style="max-width: 1100px"
+        >
+          <div class="row g-0">
+            <!-- left: form -->
+            <div class="col-lg-7 p-4">
+              <h3 class="main-heading mb-2">Get in touch</h3>
+              <p class="text-muted small mb-3">
+                Fill in the form and we’ll respond within 24–48 hours.
+              </p>
+
+              <form id="contact-form" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">Full name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      class="form-control"
+                      required
+                      placeholder="Your full name"
+                    />
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email address</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      class="form-control"
+                      required
+                      placeholder="you@example.com"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input
+                      id="subject"
+                      name="subject"
+                      class="form-control"
+                      placeholder="Subject (optional)"
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-control"
+                      rows="6"
+                      required
+                      placeholder="Write your message..."
+                    ></textarea>
+                    <div class="invalid-feedback">Please enter a message.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="category" class="form-label">Category</label>
+                    <select id="category" name="category" class="form-select">
+                      <option value="general">General inquiry</option>
+                      <option value="support">Support</option>
+                      <option value="business">Partnership / Business</option>
+                      <option value="feedback">Feedback</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label d-block"
+                      >Attachment (optional)</label
+                    >
+                    <div class="d-flex gap-2 align-items-center">
+                      <input
+                        id="attachment"
+                        type="file"
+                        class="form-control form-control-sm"
+                        accept=".png,.jpg,.jpeg,.pdf,.txt"
+                      />
+                      <button
+                        id="clear-attach"
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm"
+                      >
+                        Clear
+                      </button>
+                    </div>
+                    <div
+                      id="attach-preview"
+                      class="small text-muted mt-1"
+                    ></div>
+                  </div>
+
+                  <div class="col-12 d-flex gap-2 align-items-center mt-2">
+                    <button
+                      id="send-btn"
+                      type="submit"
+                      class="btn btn-generate"
+                    >
+                      Send message
+                    </button>
+                    <button
+                      id="save-draft"
+                      type="button"
+                      class="btn btn-outline-save"
+                    >
+                      Save draft
+                    </button>
+                    <div
+                      id="contact-feedback"
+                      class="form-feedback ms-3"
+                      aria-live="polite"
+                    ></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- right: contact info -->
+            <aside class="col-lg-5 p-4 border-start">
+              <h5 class="main-heading">Contact info</h5>
+              <p class="small text-muted">
+                Prefer email? Use hello@quizify.ai — or message us using the
+                form.
+              </p>
+
+              <ul class="list-unstyled mt-3 contact-info">
+                <li><strong>Office:</strong> Gujranwala, Pakistan</li>
+                <li class="mt-2">
+                  <strong>Email:</strong>
+                  <a href="mailto:hello@quizify.ai">hello@quizify.ai</a>
+                </li>
+                <li class="mt-2">
+                  <strong>Phone:</strong>
+                  <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </li>
+              </ul>
+
+              <hr />
+
+              <h6 class="mb-2">Quick links</h6>
+              <ul class="list-unstyled small">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+
+              <div class="mt-4 small text-muted">
+                We usually reply within 1–2 business days.
+              </div>
+              <div>
+                <img
+                  class="img-fluid"
+                  src="assests/img/AI-Quiz-Generators.webp"
+                  alt=""
+                />
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (clean) -->
+    <footer class="footer-wclean px-lg-0 px-3 mt-5">
+      <div class="bg-section">
+        <div class="footer-sec text-center py-4">
+          <a href="index.html"
+            ><img
+              class="img-fluid mb-3"
+              src="assests/img/footer-logo.png"
+              alt=""
+          /></a>
+          <p class="mb-2">Made with &#128151; in Gujranwala, Pakistan</p>
+
+          <ul
+            class="my-list pt-3 ps-0 d-flex justify-content-center gap-3"
+            style="list-style: none"
+          >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          
+            <li><a href="categories.html">Contact</a></li>
+          </ul>
+
+          <div class="cop-rigts text-center pt-4">
+            <p class="mb-1">
+              © <span id="year-el"></span> QuizifyAI — All rights reserved.
+            </p>
+            <a href="terms-conditions.html">Terms and conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assests/js/contact.js"></script>
+    <script>
+      document.getElementById("year-el").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
